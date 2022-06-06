@@ -11,7 +11,7 @@ from vosk import Model
 
 import command_handler.command_handler as command
 
-prefix='q '
+prefix='yuki '
 
 engine = pyttsx3.init()
 
