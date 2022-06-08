@@ -19,7 +19,6 @@ if not os.path.exists("model"):
     print("Please download the model and unpack as 'model' in the current folder.")
     sys.exit()
 
-
 MODEL = Model("model")
 REC = KaldiRecognizer(MODEL, 16000)
 
@@ -50,5 +49,6 @@ while True:
             x = wval.replace(prefix, "")
             print(x)
             oput = command.h(x)
+            print(oput)
             engine.say(oput)
             engine.runAndWait()
