@@ -31,7 +31,6 @@ model.load_state_dict(model_state)
 model.eval()
 
 
-
 def h(input):
     if input == 'stop':
         sys.exit(0)
@@ -61,4 +60,3 @@ def h(input):
                     return random.choice(intent['responses'])
         else:
             return "I do not understand..."
-
