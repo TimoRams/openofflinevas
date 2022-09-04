@@ -11,7 +11,7 @@ from vosk import Model
 
 import command_handler.command_handler as command
 
-prefix = 'yuki '
+prefix = 'computer '
 
 engine = pyttsx3.init()
 
@@ -47,8 +47,10 @@ while True:
             if len(after) > 0:
                 wval = after
             x = wval.replace(prefix, "")
+            STREAM.stop_stream()
             print(x)
             oput = command.h(x)
             print(oput)
             engine.say(oput)
             engine.runAndWait()
+            STREAM.start_stream()
