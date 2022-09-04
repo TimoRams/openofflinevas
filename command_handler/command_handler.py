@@ -60,3 +60,4 @@ def h(input):
                     return random.choice(intent['responses'])
         else:
             return "I do not understand..."
+    return returnvar
